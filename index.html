@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>VigyanLabs | Innovation With Purpose</title>
+
+    <meta name="description"
+        content="VigyanLabs delivers intelligent technology solutions in software engineering, automation, artificial intelligence, and healthcare technology.">
 
     <style>
         * {
@@ -12,108 +17,250 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: "Segoe UI", Arial, sans-serif;
-            background: #ffffff;
-            color: #1f2937;
-            height: 100vh;
+
+            background:
+                radial-gradient(circle at top,
+                    rgba(59, 130, 246, 0.12),
+                    transparent 35%),
+                #0f172a;
+
+            color: #f8fafc;
+            line-height: 1.7;
+        }
+
+        .hero {
+            min-height: 100vh;
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
         }
 
         .container {
+            max-width: 1200px;
+            width: 100%;
             text-align: center;
-            max-width: 700px;
-            padding: 40px;
+        }
+
+        .logo-container {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.04);
+            padding: 20px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            margin-bottom: 50px;
         }
 
         .logo {
-            width: 450px;
-            max-width: 90%;
-            margin-bottom: 30px;
-        }
-
-        h1 {
-            font-size: 3rem;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
+            width: 650px;
+            max-width: 100%;
+            display: block;
+            border-radius: 12px;
         }
 
         .tagline {
-            font-size: 1.3rem;
-            color: #4b5563;
-            margin-bottom: 30px;
-            letter-spacing: 1px;
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .sub-tagline {
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 35px;
+            font-size: 0.95rem;
         }
 
         .description {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #6b7280;
-            margin-bottom: 40px;
+            max-width: 850px;
+            margin: auto;
+            color: #cbd5e1;
+            font-size: 1.15rem;
+            line-height: 1.9;
         }
 
-        .coming-soon {
+        .cards {
+            margin-top: 80px;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 32px;
+            text-align: left;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 255, 0.18);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            color: #ffffff;
+        }
+
+        .card p {
+            color: #94a3b8;
+        }
+
+        .contact-section {
+            margin-top: 100px;
+        }
+
+        .contact-section h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-section p {
+            color: #94a3b8;
+            max-width: 650px;
+            margin: 0 auto 30px;
+        }
+
+        .contact-button {
             display: inline-block;
+
             padding: 14px 32px;
-            border: 2px solid #1f2937;
-            border-radius: 30px;
-            font-weight: 600;
-            letter-spacing: 1px;
+
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 10px;
+
+            text-decoration: none;
+            color: white;
+
+            transition: all 0.3s ease;
+        }
+
+        .contact-button:hover {
+            background: #334155;
         }
 
         .footer {
-            margin-top: 50px;
-            font-size: 0.95rem;
-            color: #9ca3af;
+            margin-top: 80px;
+            color: #64748b;
+            font-size: 0.9rem;
         }
 
-        .footer a {
-            color: #1f2937;
-            text-decoration: none;
-        }
+        @media(max-width: 900px) {
 
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
+            .cards {
+                grid-template-columns: 1fr;
             }
 
             .tagline {
-                font-size: 1rem;
+                font-size: 2rem;
             }
 
             .description {
                 font-size: 1rem;
             }
+
+            .logo {
+                width: 100%;
+            }
+
+            .contact-section h2 {
+                font-size: 1.6rem;
+            }
         }
     </style>
+
 </head>
 
 <body>
 
-<div class="container">
+    <section class="hero">
 
-    <!-- Replace with your logo filename -->
-    <img src="logo.png" alt="VigyanLabs" class="logo">
+        <div class="container">
 
-    <p class="tagline">Innovation With Purpose</p>
+            <div class="logo-container">
+                <img src="logo.png" alt="VigyanLabs Logo" class="logo">
+            </div>
 
-    <p class="description">
-        Building intelligent solutions in software engineering,
-        quality assurance, automation, artificial intelligence,
-        and healthcare technology.
-    </p>
+            <h1 class="tagline">
+                Building Intelligent Solutions
+            </h1>
 
-    <div class="coming-soon">
-        WEBSITE LAUNCHING SOON
-    </div>
+            <p class="sub-tagline">
+                Innovation With Purpose
+            </p>
 
-    <div class="footer">
-        Contact: <a href="mailto:hello@vigyanlabs.co.in">hello@vigyanlabs.co.in</a>
-    </div>
+            <p class="description">
+                We help organizations build reliable software, automate complex processes,
+                and leverage intelligent technologies to solve real-world challenges.
+            </p>
 
-</div>
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Software Engineering</h3>
+                    <p>
+                        Reliable and scalable software solutions designed to
+                        accelerate business growth.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>AI & Automation</h3>
+                    <p>
+                        Practical artificial intelligence and intelligent
+                        automation for real-world challenges.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Healthcare Technology</h3>
+                    <p>
+                        Specialized expertise in healthcare software,
+                        quality engineering, and digital transformation.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="contact-section">
+
+                <h2>
+                    Innovation starts with a conversation.
+                </h2>
+
+                <p>
+                    Let's discuss your next challenge and explore how technology
+                    can create meaningful impact.
+                </p>
+
+                <a href="mailto:hello@vigyanlabs.co.in"
+                    class="contact-button">
+                    Get In Touch →
+                </a>
+
+            </div>
+
+            <div class="footer">
+                © 2026 VigyanLabs. All rights reserved.
+            </div>
+
+        </div>
+
+    </section>
 
 </body>
+
 </html>
